@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/sidebar';
 import Home from './pages/home';
 import About from './pages/about';
+import Project from './pages/project';
 import { motion } from 'framer-motion';
 // import Lanyard from './components/Lanyard';
 import ProfileCard from './components/ProfileCard'
@@ -83,6 +84,7 @@ export default function App() {
 
       <Home />
       <About />
+      <Project />
     </>
   );
 }

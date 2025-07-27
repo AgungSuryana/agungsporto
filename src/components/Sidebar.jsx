@@ -26,13 +26,13 @@ export default function Sidebar() {
 
     // Daftar item menu
     const menuItems = [
-        { name: 'Home', href: '#home', level: 0 },
-        { name: 'About', href: '#about', level: 0 },
-        { name: '  Education', href: '#education', level: 1 },
-        { name: '  Experience', href: '#experience', level: 1 },
+        { name: 'HOME', href: '#home', level: 0 },
+        { name: 'ABOUT', href: '#about', level: 0 },
+        { name: '  EDUCATION', href: '#education', level: 1 },
+        { name: '  EXPERIENCE', href: '#experience', level: 1 },
         // { name: '    Work', href: '#work', level: 2 },
-        { name: '    Project', href: '#project', level: 0 },
-        { name: 'Contact', href: '#contact', level: 0 },
+        { name: '    LATEST PROJECT', href: '#project', level: 0 },
+        { name: 'CONTACT', href: '#contact', level: 0 },
     ];
 
     // Lebar sidebar dalam rem (w-72 -> 18rem)
@@ -45,7 +45,7 @@ export default function Sidebar() {
             {/* Tombol Hamburger - Gaya baru yang lebih panjang dan menyatu */}
             <button
                 onClick={toggleSidebar}
-                className="fixed top-7 z-50 px-5 py-7 bg-[var(--primary-dark)] text-[var(--primary-light)] rounded-l-xl shadow-lg hover:bg-gray-700   transition-all duration-500 ease-in-out"
+                className="fixed top-7 z-50 px-5 py-7 bg-[var(--primary-light)] text-[var(--primary-dark)] rounded-l-xl shadow-lg hover:bg-gray-700   transition-all duration-500 ease-in-out"
                 style={{ right: isSidebarOpen ? buttonRightPositionOpen : buttonRightPositionClosed }}
                 aria-label="Toggle menu"
             >
@@ -58,17 +58,17 @@ export default function Sidebar() {
             {isSidebarOpen && (
                 <div
                     onClick={toggleSidebar}
-                    className="fixed inset-0 bg-black/60 z-30 transition-opacity duration-300 ease-in-out"
+                    className="fixed inset-0 bg-black/40 z-30 transition-opacity duration-300 ease-in-out"
                     aria-hidden="true"
                 ></div>
             )}
 
             {/* Sidebar */}
             <aside
-                className={`fixed top-0 right-0 h-full w-[500px] bg-[var(--primary-dark)] text-[var(--primary-light)] shadow-2xl transform transition-transform duration-500 ease-in-out z-40 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-[500px] bg-[var(--primary-light)] text-[var(--primary-dark)] shadow-2xl transform transition-transform duration-500 ease-in-out z-40 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
-                <div className="p-6">
+                <div className="p-7">
                     <h2 className="text-2xl font-semibold mb-8 border-b border-gray-600 pb-4">Navigation</h2>
                     <nav>
                         <ul>
@@ -76,8 +76,8 @@ export default function Sidebar() {
                                 <li key={index} className="mb-1">
                                     <a
                                         href={item.href}
-                                        style={{ paddingLeft: `${item.level * 2}rem` }}
-                                        className="wiggle flex items-center p-5 text-5xl poppins-bold rounded-lg transition-all duration-200 group"
+                                        style={{ paddingLeft: `${item.level * 3}rem` }}
+                                        className="wiggle flex items-center p-4 text-5xl poppins-medium rounded-lg transition-all duration-200 group"
                                     >
                                         <span className="flex-1 whitespace-nowrap timbul-3d timbul-3d-hover">
                                             {item.name}

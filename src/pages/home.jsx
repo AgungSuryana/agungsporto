@@ -23,7 +23,7 @@ const Home = () => {
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.4, ease: 'easeOut' }}
-                    className="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-30 bg-[var(--primary-dark)] text-[var(--primary-light)]  py-5 px-4
+                    className="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-30 text-[var(--primary-dark)] bg-[var(--primary-light)]  py-5 px-4
                             flex-col gap-4 rounded-r-2xl shadow-lg"
                 >
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,7 @@ const Home = () => {
                         transition={{ delay: 0.8, duration: 0.4, ease: 'easeOut' }}
                         className="text-start"
                     >
-                        <div className='flex md:justify-start text-[var(--primary-dark)] text-3xl lg:text-7xl'>
+                        <div className='flex md:justify-start text-[var(--primary-light)] text-3xl lg:text-7xl'>
                             <h1 className="poppins-regular md:ml-20 font-bold">HI I'M</h1>
                             <div className=" ml-3 w-43 lg:w-[500px] lg:h-[70px] relative overflow-hidden">
                                 <AnimatePresence mode="wait">
@@ -61,10 +61,10 @@ const Home = () => {
                                 </AnimatePresence>
                             </div>
                         </div>
-                        <h1 className="tracking-widest poppins-bold text-7xl lg:text-[300px] text-[var(--primary-dark)] ">
+                        <h1 className="tracking-widest poppins-bold text-7xl lg:text-[300px] text-[var(--primary-light)] ">
                             AGUNG
                         </h1>
-                        <h1 className="tracking-wider poppins-regular text-7xl lg:text-[300px] text-[var(--primary-dark)] ">
+                        <h1 className="tracking-wider poppins-regular text-7xl lg:text-[300px] text-[var(--primary-light)] ">
                             SURYANA
                         </h1>
                     </motion.div>

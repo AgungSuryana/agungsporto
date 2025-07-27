@@ -24,12 +24,12 @@ body,
 
 /* *:not(html, body) {
   outline: 1px solid red;
-}
+} */
 
- */
+
 
 body {
-  background-color: #eeeeee;
+  background-color: #222831;
 }
 
 .poppins-extralight {
@@ -101,7 +101,7 @@ body {
 }
 
 .timbul-3d-hover:hover {
-  transform: translateZ(15px) scale(1.50);
+  transform: translateZ(15px) scale(1.1);
   text-shadow:
     1px 1px 0 #ccc,
 
