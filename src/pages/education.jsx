@@ -13,7 +13,7 @@ export default function Education() {
                             <div className="bg-[var(--primary-light)] p-3 rounded-full">
                                 <FaBriefcase size={28} className="text-[#171c28]" />
                             </div>
-                            <h1 className="text-4xl poppins-semibold ">Experience</h1>
+                            <h1 className="text-5xl poppins-semibold ">Experience</h1>
                         </div>
 
                         <div className="relative border-l-2 border-[var(--primary-light)] ml-4 pl-8 space-y-10">
@@ -63,7 +63,7 @@ export default function Education() {
                             <div className="bg-[var(--primary-light)]  p-3 rounded-full">
                                 <FaGraduationCap size={28} className="text-[var(--primary-dark)]" />
                             </div>
-                            <h1 className="text-4xl poppins-semibold text-[var(--primary-light)] ">Education</h1>
+                            <h1 className="text-5xl poppins-semibold text-[var(--primary-light)] ">Education</h1>
                         </div>
 
                         <div className="relative border-l-2 border-[var(--primary-light)]  ml-4 pl-8 space-y-10">
