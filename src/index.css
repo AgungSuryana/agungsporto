@@ -10,6 +10,17 @@
   --second-dark: #393E46;
 }
 
+/* globals.css atau style.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
 
 
 html,

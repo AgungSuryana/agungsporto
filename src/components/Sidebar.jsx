@@ -30,6 +30,7 @@ export default function Sidebar() {
         { name: 'ABOUT', href: '#about', level: 0 },
         { name: '  EDUCATION', href: '#education', level: 1 },
         { name: '  EXPERIENCE', href: '#experience', level: 1 },
+        { name: '  SKILLS', href: '#experience', level: 1 },
         // { name: '    Work', href: '#work', level: 2 },
         { name: '    LATEST PROJECT', href: '#project', level: 0 },
         { name: 'CONTACT', href: '#contact', level: 0 },
