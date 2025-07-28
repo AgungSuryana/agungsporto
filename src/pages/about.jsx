@@ -2,6 +2,8 @@ import React from 'react';
 // import ScrollReveal from '../animation/ScrollReveal';
 import { FaInstagram, FaYoutube, FaTiktok, FaGlobe, FaWhatsapp } from 'react-icons/fa';
 import Education from './education';
+import Skill from './skill';
+import Sertifikat from './sertifikat';
 import GitHubCalendar from 'react-github-calendar';
 
 
@@ -54,6 +56,9 @@ export default function About() {
                 </div>
 
                 <Education />
+                <Sertifikat />
+
+                <Skill />
 
                 <div className='flex justify-center mt-20 bg-py-5 bg-[var(--second-dark)]  rounded-2xl py-5 px-5'>
                     <GitHubCalendar
