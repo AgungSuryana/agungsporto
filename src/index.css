@@ -41,6 +41,7 @@ body,
 
 body {
   background-color: #222831;
+  overflow-x: hidden;
 }
 
 .poppins-extralight {
