@@ -108,7 +108,7 @@ const Project = () => {
             {/* Tombol See More */}
             <div className="mt-10 text-center">
                 <Link
-                    to="/projects"
+                    to="/comingsoon"
                     className="poppins-semibold inline-block px-6 py-3 bg-[var(--primary-light)] text-[var(--primary-dark)] font-medium rounded-full hover:bg-sky-700 transition"
                 >
                     See More Projects →
