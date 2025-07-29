@@ -18,25 +18,6 @@ const Home = () => {
         <div id='home'>
             <div className="min-h-screen flex flex-col md:pl-56 md:items-start items-center justify-center ">
 
-                {/* Sidebar Sosmed dalam kotak - ANIMASI DARI KANAN */}
-                <motion.div
-                    initial={{ x: -100, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.8, duration: 0.4, ease: 'easeOut' }}
-                    className="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-30 text-[var(--primary-dark)] bg-[var(--primary-light)]  py-5 px-4
-                            flex-col gap-4 rounded-r-2xl shadow-lg"
-                >
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="text-3xl hover:text-gray-400 transition" />
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="text-3xl hover:text-gray-400 transition" />
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram className="text-3xl hover:text-gray-400 transition" />
-                    </a>
-                </motion.div>
-
                 <div className="flex-grow flex md:items-center ">
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
@@ -70,7 +51,7 @@ const Home = () => {
                     </motion.div>
                 </div>
 
-                <div className="flex md:hidden justify-center w-50 rounded-t-2xl gap-6 py-3 bg-[var(--primary-dark)] text-[var(--primary-light)]">
+                {/* <div className="flex md:hidden justify-center w-50 rounded-t-2xl gap-6 py-3 bg-[var(--primary-dark)] text-[var(--primary-light)]">
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="text-3xl hover:text-gray-400 transition" />
                     </a>
@@ -80,7 +61,7 @@ const Home = () => {
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className="text-3xl hover:text-gray-400 transition" />
                     </a>
-                </div>
+                </div> */}
 
             </div>
 
