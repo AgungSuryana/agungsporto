@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 // import ScrollReveal from '../animation/ScrollReveal';
 import { FaInstagram, FaYoutube, FaTiktok, FaGlobe, FaWhatsapp } from 'react-icons/fa';
 import Education from './education';
 import Skill from './skill';
 import Sertifikat from './sertifikat';
 import GitHubCalendar from 'react-github-calendar';
+import ScrollFloat from "../components/ScrollFloat";
+
+
+
 
 
 export default function About() {
+    const handleAnimationComplete = () => {
+        console.log('All letters have animated!');
+    };
+
+
+
     return (
         <section id="about" className="bg-[var(--primary-dark)] min-h-screen px-6 py-24 text-[var(--primary-light)]">
-            <div className="w-full max-w-7xl mx-auto">
-                {/* Judul */}
-                <div className="mb-10">
-                    <h1 className="poppins-semibold text-7xl font-bold text-left">
-                        About Me
-                    </h1>
-                    {/* <h1 className="poppins-semibold text-[29px] font-bold mb-8 text-left">
-                        Education & Experience
-                    </h1> */}
-                </div>
 
+            {/* Judul */}
+            <div className="poppins-semibold text-xl w-full max-w-7xl mx-auto mb-10 ">
+                <h1 data-scroll data-scroll-speed="1" className="poppins-semibold text-7xl">ABOUT</h1>
+                {/* <ScrollFloat
+                    animationDuration={10}
+                    ease='back.inOut(2)'
+                    scrollStart='center bottom+=100%'
+                    scrollEnd='bottom bottom-=80%'
+                    stagger={0.03}
+                    className='text-2xl'
+                >
+                   ABOUT
+                </ScrollFloat> */}
+            </div>
+
+            <div className="w-full max-w-7xl mx-auto">
                 {/* Konten */}
                 <div className="text-justify text-2xl poppins-light leading-relaxed space-y-8">
                     {/* Profil */}
