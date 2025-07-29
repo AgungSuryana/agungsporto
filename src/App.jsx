@@ -1,90 +1,44 @@
-import { useEffect, useState } from 'react';
-import SplashScreen from './components/SplashScreen';
-import Navbar from './components/Navbar';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Sidebar from './components/sidebar';
+import SocialSidebar from './components/SocialSidebar';
 import Home from './pages/home';
 import About from './pages/about';
 import Project from './pages/project';
+import ComingSoon from './pages/comingsoon';
 import { motion } from 'framer-motion';
-// import Lanyard from './components/Lanyard';
-import ProfileCard from './components/ProfileCard'
-// import Lenis from "@studio-freight/lenis";
+import LocomotiveScrollProvider from './components/LocomotiveScrollProvider';
 
 export default function App() {
-
-  const [showSplash, setShowSplash] = useState(true);
-  const [showNavbar, setShowNavbar] = useState(false);
-  const [showHome, setShowHome] = useState(false);
-
-  // Saat splash selesai, tampilkan komponen satu-satu dengan delay
-  const handleSplashComplete = () => {
-    setShowSplash(false);
-
-    // Delay tampilkan navbar
-    setTimeout(() => {
-      setShowNavbar(true);
-    }, 800); // 400ms setelah splash
-
-    // Delay tampilkan home
-    setTimeout(() => {
-      setShowHome(true);
-    }, 100); // 800ms setelah splash
-  };
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   return (
     <>
-      {/* {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      {/* Sidebar tetap di luar Locomotive */}
+      {isHome && (
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+        >
+          <Sidebar />
+          <SocialSidebar />
+        </motion.div>
+      )}
 
-      {!showSplash && (
-        <>
-          {showNavbar && (
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
-            >
-              <Sidebar />
-            </motion.div>
-          )}
-
-
-
-          {showHome && (
-            <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <LocomotiveScrollProvider>
               <Home />
               <About />
-              <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-
-               <ProfileCard
-                name="Agung"
-                title="Software Engineer"
-                handle="javicodes"
-                status="Online"
-                contactText="Contact Me"
-                avatarUrl="/path/to/avatar.jpg"
-                showUserInfo={true}
-                enableTilt={true}
-                behindGradient="undefined"
-                innerGradient="undefined"
-                enableMobileTilt={false}
-                onContactClick={() => console.log('Contact clicked')}
-              /> 
-            </>
-          )}
-        </>
-      )} */}
-
-      <motion.div
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
-      >
-        <Sidebar />
-      </motion.div>
-
-      <Home />
-      <About />
-      <Project />
+              <Project />
+            </LocomotiveScrollProvider>
+          }
+        />
+        <Route path="/comingsoon" element={<ComingSoon />} />
+      </Routes>
     </>
   );
 }
